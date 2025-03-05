@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Date and Time</title>
+    <style>
+        body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold; 
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: Impact, sans-serif;
+    background-color: aqua;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(0, 183, 183);
+}
+
+p {
+    font-size: x-large;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Click the button to display the current date and time</h1>
+    <button onclick="displayDateTime()">Show Current Date and Time</button>
+    <p id="datetime"></p>
+
+    <script>
+        function displayDateTime() {
+            var current_date_time = new Date();
+            document.getElementById('datetime').innerText = current_date_time;
+        }
+    </script>
+</body>
+</html>
